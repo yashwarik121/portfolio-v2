@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export const KineticCursor = () => {
@@ -7,11 +7,12 @@ export const KineticCursor = () => {
   const [visible, setVisible] = useState(false);
   const rawX = useMotionValue(-100);
   const rawY = useMotionValue(-100);
-  const x = useSpring(rawX, { stiffness: 520, damping: 34, mass: 0.35 });
-  const y = useSpring(rawY, { stiffness: 520, damping: 34, mass: 0.35 });
-  const haloX = useSpring(rawX, { stiffness: 130, damping: 20, mass: 0.75 });
-  const haloY = useSpring(rawY, { stiffness: 130, damping: 20, mass: 0.75 });
-  const rotate = useTransform(x, (latest) => (latest % 360) - 180);
+  
+  // Smooth, reactive springs for premium feel
+  const x = useSpring(rawX, { stiffness: 800, damping: 40, mass: 0.15 });
+  const y = useSpring(rawY, { stiffness: 800, damping: 40, mass: 0.15 });
+  const haloX = useSpring(rawX, { stiffness: 220, damping: 28, mass: 0.5 });
+  const haloY = useSpring(rawY, { stiffness: 220, damping: 28, mass: 0.5 });
 
   useEffect(() => {
     const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
@@ -45,29 +46,29 @@ export const KineticCursor = () => {
     };
   }, [rawX, rawY]);
 
+  if (!visible) return null;
+
   return (
     <div className="pointer-events-none fixed inset-0 z-[100] hidden md:block" aria-hidden="true">
+      {/* Outer Ring (Trailing Halo) */}
       <motion.div
-        className="absolute h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-foreground mix-blend-difference"
+        className="absolute h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-foreground/60 mix-blend-difference"
         style={{ x: haloX, y: haloY, opacity: visible ? 1 : 0 }}
-        animate={{ scale: active ? 1.9 : pressed ? 0.72 : 1 }}
-        transition={{ type: "spring", stiffness: 260, damping: 22 }}
+        animate={{ 
+          scale: active ? 1.5 : pressed ? 0.8 : 1,
+          backgroundColor: active ? "rgba(255, 255, 255, 0.1)" : "rgba(255, 255, 255, 0)"
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
       />
+      {/* Inner Dot */}
       <motion.div
-        className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-hot shadow-[0_0_0_6px_hsl(var(--highlight)/0.35)]"
+        className="absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground mix-blend-difference"
         style={{ x, y, opacity: visible ? 1 : 0 }}
-        animate={{ scale: pressed ? 0.7 : active ? 1.4 : 1 }}
-        transition={{ type: "spring", stiffness: 500, damping: 24 }}
+        animate={{ 
+          scale: pressed ? 0.6 : active ? 0 : 1 
+        }}
+        transition={{ type: "spring", stiffness: 400, damping: 30 }}
       />
-      <motion.div
-        className="cursor-spark absolute h-9 w-9 -translate-x-1/2 -translate-y-1/2"
-        style={{ x, y, rotate, opacity: visible && active ? 1 : 0 }}
-      >
-        <span />
-        <span />
-        <span />
-        <span />
-      </motion.div>
     </div>
   );
 };

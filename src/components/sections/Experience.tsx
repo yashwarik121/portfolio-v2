@@ -4,10 +4,12 @@ import exp2 from "@/assets/exp-2.jpg";
 import exp3 from "@/assets/exp-3.jpg";
 
 const exp = [
-  { when: "Jan ’26 – Feb ’26", who: "Broadway Live", role: "Strategy Intern", what: "Wireframes, multi-source data, product security testing." },
+  { when: "Jul ’26 – Sep ’26", who: "Intellect Bizware Inc", role: "SDE Intern", what: " Dashboards, Web Dev, React, Sync" },
+  { when: "Jan ’26 – Feb ’26", who: "Broadway Live", role: "Product Intern", what: "Wireframes, multi-source data, product security testing." },
   { when: "Dec ’25 – Jan ’26", who: "Nuvoco Vistas", role: "Project Mgmt Intern", what: "Cross-functional ops, data validation, manufacturing systems." },
   { when: "Jun ’25 – Sep ’25", who: "BetterAlt", role: "AI Strategy Intern", what: "Meta Ads, brand positioning, design × tech sprints." },
   { when: "Jun ’24 – Aug ’24", who: "ONGC", role: "Software Eng Intern", what: "Django Platform, REST APIs, query optimization." },
+  
 ];
 
 export const Experience = () => (

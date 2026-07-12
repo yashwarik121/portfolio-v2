@@ -67,12 +67,12 @@ const projects = [
   },
   {
     no: "06",
-    title: "Ops Insight Board",
-    org: "Nuvoco - 2026",
-    tags: ["PM", "Data Validation", "Dashboards", "Systems"],
+    title: "Ragged- Data Understood",
+    org: "Self - 2026",
+    tags: ["RAG", "Retrieval", "Ingestion", "Ollama", "LangChain",],
     blurb:
       "Operations-facing analysis flow for checking data consistency, surfacing exceptions, and making handoffs easier to track.",
-    links: [{ label: "case", href: "#contact", icon: Globe2 }],
+    links: [{ label: "repo", href: "https://github.com/yashwarik121/ragged", icon: Globe2 }],
     color: "bg-acid",
   },
 ];

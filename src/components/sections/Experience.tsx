@@ -37,21 +37,28 @@ export const Experience = () => (
           ))}
         </ol>
 
-        <aside className="md:col-span-4 flex flex-col gap-6 md:pt-4">
-          <figure className="relative rotate-[-3deg] transition-transform hover:rotate-0">
-            <img src={exp1} alt="Office desk collage" loading="lazy" width={768} height={1024}
-              className="w-full border-2 border-foreground shadow-[6px_6px_0_0_hsl(var(--foreground))]" />
-            <figcaption className="absolute -top-3 -right-3"><Sticker color="hot" rotate={6}>field notes</Sticker></figcaption>
-          </figure>
-          <figure className="relative rotate-[2deg] ml-6 transition-transform hover:rotate-0">
-            <img src={exp2} alt="Hands typing collage" loading="lazy" width={768} height={1024}
-              className="w-full border-2 border-foreground shadow-[6px_6px_0_0_hsl(var(--foreground))]" />
-          </figure>
-          <figure className="relative rotate-[-2deg] transition-transform hover:rotate-0">
-            <img src={exp3} alt="Mumbai skyline collage" loading="lazy" width={768} height={1024}
-              className="w-full border-2 border-foreground shadow-[6px_6px_0_0_hsl(var(--foreground))]" />
-            <figcaption className="absolute -bottom-3 -left-3"><Sticker color="cobalt" rotate={-4}>home base</Sticker></figcaption>
-          </figure>
+        <aside className="md:col-span-4 relative flex items-center justify-center pt-8 md:pt-12 pb-16">
+          <div className="group/stack relative w-full max-w-[280px] h-[380px]">
+            {/* Card 3 (exp3 - Bottom) */}
+            <figure className="absolute inset-0 rotate-[-8deg] origin-bottom-left transition-all duration-500 cubic-bezier(0.175, 0.885, 0.32, 1.275) group-hover/stack:rotate-[-22deg] group-hover/stack:-translate-x-10 group-hover/stack:-translate-y-4">
+              <img src={exp3} alt="Mumbai skyline collage" loading="lazy" width={768} height={1024}
+                className="w-full h-full object-cover border-2 border-foreground bg-white p-2 shadow-[4px_4px_0_0_hsl(var(--foreground))]" />
+              <figcaption className="absolute -bottom-3 -left-3 z-10"><Sticker color="cobalt" rotate={-4}>home base</Sticker></figcaption>
+            </figure>
+            
+            {/* Card 2 (exp2 - Middle) */}
+            <figure className="absolute inset-0 rotate-[6deg] origin-bottom-right transition-all duration-500 cubic-bezier(0.175, 0.885, 0.32, 1.275) group-hover/stack:rotate-[18deg] group-hover/stack:translate-x-10 group-hover/stack:-translate-y-2">
+              <img src={exp2} alt="Hands typing collage" loading="lazy" width={768} height={1024}
+                className="w-full h-full object-cover border-2 border-foreground bg-white p-2 shadow-[4px_4px_0_0_hsl(var(--foreground))]" />
+            </figure>
+            
+            {/* Card 1 (exp1 - Top) */}
+            <figure className="absolute inset-0 rotate-[-2deg] transition-all duration-500 cubic-bezier(0.175, 0.885, 0.32, 1.275) group-hover/stack:rotate-0 group-hover/stack:-translate-y-6">
+              <img src={exp1} alt="Office desk collage" loading="lazy" width={768} height={1024}
+                className="w-full h-full object-cover border-2 border-foreground bg-white p-2 shadow-[6px_6px_0_0_hsl(var(--foreground))]" />
+              <figcaption className="absolute -top-3 -right-3 z-10"><Sticker color="hot" rotate={6}>field notes</Sticker></figcaption>
+            </figure>
+          </div>
         </aside>
       </div>
     </div>

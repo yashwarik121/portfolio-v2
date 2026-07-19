@@ -81,9 +81,6 @@ export const Experience = () => {
                 <figcaption className="absolute -top-3 -right-3 z-10"><Sticker color="hot" rotate={6}>field notes</Sticker></figcaption>
               </figure>
             </div>
-            <span className="mt-4 font-mono text-xs opacity-50 select-none animate-pulse">
-              💡 tap stack to cycle photos
-            </span>
           </aside>
         </div>
       </div>

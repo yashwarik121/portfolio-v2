@@ -25,8 +25,8 @@ export const About = () => (
 
         <aside className="md:col-span-5 space-y-3">
           {[
-            { k: "Now", v: "BE Computer Engineering, ’27" },
-            { k: "Past", v: "ONGC · BetterAlt · Nuvoco · Broadway Live" },
+            { k: "Now", v: "SDE Intern · BE Computer Engineering, ’27" },
+            { k: "Past", v: "ONGC · BetterAlt · Nuvoco · Broadway Live (multiple roles)" },
             { k: "Loves", v: "music, doomscrolling, niche stuff, sneakers" },
             { k: "Hates", v: "dsa (damn), deadlines." },
           ].map(({ k, v }) => (

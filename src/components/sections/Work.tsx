@@ -71,7 +71,7 @@ const projects = [
     org: "Self - 2026",
     tags: ["RAG", "Retrieval", "Ingestion", "Ollama", "LangChain",],
     blurb:
-      "Operations-facing analysis flow for checking data consistency, surfacing exceptions, and making handoffs easier to track.",
+      "A local data retrieval and augmented generation project with custom opinion generation using Ollama, LangChain, and structured ingestion.",
     links: [{ label: "repo", href: "https://github.com/yashwarik121/ragged", icon: Globe2 }],
     color: "bg-acid",
   },

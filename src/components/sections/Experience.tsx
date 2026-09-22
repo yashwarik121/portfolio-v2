@@ -5,7 +5,8 @@ import exp3 from "@/assets/exp-3.jpg";
 import { useState } from "react";
 
 const exp = [
-  { when: "Jul ’26 – Sep ’26", who: "Intellect Bizware Inc", role: "SDE Intern", what: " Dashboards, Web Dev, React, Sync" },
+  { when: "Sep ’26 – Present", who: "GS Caltex", role: "AI Engineering Intern", what: "doing random stuff until i figure out what will i actually do?" },
+  { when: "Jul ’26 – Sep ’26", who: "Intellect Bizware Inc", role: "SDE Intern", what: "Dashboards, Web Dev, React, Sync" },
   { when: "Jan ’26 – Feb ’26", who: "Broadway Live", role: "Product Intern", what: "Wireframes, multi-source data, product security testing." },
   { when: "Dec ’25 – Jan ’26", who: "Nuvoco Vistas", role: "Project Mgmt Intern", what: "Cross-functional ops, data validation, manufacturing systems." },
   { when: "Jun ’25 – Sep ’25", who: "BetterAlt", role: "AI Strategy Intern", what: "Meta Ads, brand positioning, design × tech sprints." },

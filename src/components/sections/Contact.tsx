@@ -1,10 +1,10 @@
 import { Sticker } from "../Sticker";
-import { Mail, Phone, Linkedin, Github } from "lucide-react";
+import { Mail, MessageSquare, Linkedin, Github } from "lucide-react";
 import contactArt from "@/assets/contact-art.jpg";
 
 const links = [
   { icon: Mail, label: "yashwarik85@gmail.com", href: "mailto:yashwarik85@gmail.com" },
-  { icon: Phone, label: "+91 98923 73439", href: "tel:+91 9892373439" },
+  { icon: MessageSquare, label: "dm me — we'll connect", href: "https://linkedin.com/in/yash-warik-514819242" },
   { icon: Linkedin, label: "linkedin.com/in/yash-warik-514819242", href: "https://linkedin.com/in/yash-warik-514819242" },
   { icon: Github, label: "github.com/yashwarik121", href: "https://github.com/yashwarik121" },
 ];
